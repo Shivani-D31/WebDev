@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOver</title>
+    <style>
+        a:hover{
+            color: red;
+        }
+        #btn{
+            width: 150px;
+            height: 130px;
+            background-color: lightgreen;
+            border: none;
+            cursor: pointer;
+        }
+        #btn:hover{
+            background-color: green;
+            width:250px ;
+            height: 250px;
+            color:white;
+            font-size: 50px;
+        }
+        /* img{
+            width: 300px;
+            height: 300px;
+        }
+        img:hover{
+            width: 200px;
+            height: 200px;
+        } */
+        p{
+            display: none;
+            background-color: blueviolet;
+            color:white;
+        }
+        span:hover+p{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- vs shortcuts to save time -->
+    <!-- br*4  break 4 times-->
+    <!-- <div class="div1">div.classname</div> --> 
+    <!-- <p id="p1"></p> -->
+    <!-- p#p1 -->
+
+    
+    <a href="">Home</a> |
+    <a href="">About</a> |
+    <a href="">Contact</a> <br><br>
+  <input type="button" value="Click" id="btn">
+  <br><br><br><br>
+  <!-- <img src="./ironman.jpg" alt="ironman"> -->
+  <br><br>
+  <span>Hover over me to see </span>
+  <!-- <div>Hello i am visible now!</div> -->
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error mollitia, dolore cumque ex sed reprehenderit distinctio officia nisi, accusamus explicabo exercitationem consequuntur asperiores repellendus vel libero atque accusantium consectetur eius similique, saepe facilis ad. Dolore, repellat. Veniam obcaecati minus voluptatibus?</p>
+</body>
+</html>
