@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <!-- mouse events:
+    onclick
+    ondblclick
+    onmousehover
+    onmouseup
+     -->
+     <!-- keyboard event:
+     onkeypress
+     onkeyup
+     onkeydown -->
+    <!-- Enter Your Message: <input type="text" onkeypress="show()" onkeyup="stop()">
+    <p id="para"></p> -->
+    Password: <input type="password" id="pass">
+    <input type="button" value="SHOW" id="btn" onclick="showhide()">
+    <img src="./ironman.jpg" alt="ironman" id="img1" width="100px" height="100px" onmouseover="big()" onmouseout="small()">
+
+    <script>
+//   function show(){
+//     document.getElementById("para").innerHTML="typing...";
+//   }
+//   function stop(){
+//     document.getElementById("para").innerHTML="online";
+//   }
+    function showhide(){
+        var btn=document.getElementById("btn");
+        var pwd=document.getElementById("pass");
+        if(btn.value=='SHOW'){
+            pwd.type="text";
+            btn.value='HIDE';
+        }
+        else{
+            pwd.type="password";
+            btn.value='SHOW';
+        }
+
+    }
+    function big(){
+        var img=document.getElementById("img1");
+        img.style.width="400px";
+        img.style.height="400px";
+    }
+    function small(){
+        var img=document.getElementById("img1");
+        img.style.width="100px";
+        img.style.height="100px";
+    }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Another way</title>
+</head>
+<body onkeyup="code(event)">
+<!-- <body onload="alert('Welcome')"> -->
+    <div id="d1">This div is created by html -static</div>
+    <!-- <button id="btn" >Click</button> -->
+    <p id="parag"></p>
+   
+
+
+
+    <script>
+        // const para=document.createElement("p");
+        // const paracontent=document.createTextNode("This paragraph is created by js -dynamic");
+        // para.appendChild(paracontent);
+        
+
+        // //add in the html
+        // const div=document.getElementById("d1");
+        // document.body.insertBefore(para,div);
+
+
+        // //another way for events:
+        // const btn=document.getElementById("btn");
+
+        // //element.addEventListner("eventname", function_name);
+        
+        // btn.addEventListener("click",buttonclick);
+        // function buttonclick(){
+        //     alert("button Clicked");
+        // }
+       function code(event){
+        document.getElementById("parag").innerHTML=event.keyCode;
+       }
+
+
+    </script>
+    
+</body>
+</html>

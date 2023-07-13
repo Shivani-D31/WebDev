@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        #d1{
+            width: 200px;
+            height: 200px;
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <!-- <p id="para"></p> -->
+    <!-- <div id="d1" onclick="change()"></div> -->
+   
+    Name:<input type="text" id="i1"> <br><br>
+    <button onclick="send()">Send</button>
+    <p id="para2"></p>
+
+    <script>
+        // document.getElementById("para").innerHTML="PARAGRAPH";
+        // function change(){
+        //     document.getElementById("d1").style.backgroundColor="red";
+        // }
+        function send(){
+            var inputvalue=document.getElementById("i1").value;
+            if(inputvalue.length<8){
+                // alert("Your name should contain atleast 8 letters");
+                document.getElementById("para2").innerHTML="Your name should contain atleast 8 letters";
+            }
+            else{
+                // alert("Your name sounds good");
+                document.getElementById("para2").innerHTML="Your name sounds good";
+
+            }
+
+        }
+
+        
+    </script>
+    
+</body>
+</html>
