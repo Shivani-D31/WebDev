@@ -8,7 +8,7 @@
 <body onkeyup="code(event)">
 <!-- <body onload="alert('Welcome')"> -->
     <div id="d1">This div is created by html -static</div>
-    <!-- <button id="btn" >Click</button> -->
+    <button id="btn" >Click</button>
     <p id="parag"></p>
    
 
@@ -26,14 +26,14 @@
 
 
         // //another way for events:
-        // const btn=document.getElementById("btn");
+        const btn=document.getElementById("btn");
 
-        // //element.addEventListner("eventname", function_name);
+        //element.addEventListner("eventname", function_name);
         
-        // btn.addEventListener("click",buttonclick);
-        // function buttonclick(){
-        //     alert("button Clicked");
-        // }
+        btn.addEventListener("click",buttonclick);
+        function buttonclick(){
+            alert("button Clicked");
+        }
        function code(event){
         document.getElementById("parag").innerHTML=event.keyCode;
        }
