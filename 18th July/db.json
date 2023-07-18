@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "abc",
+      "email": "abc@gmail.com",
+      "password": 123
+    },
+    {
+      "username": "admin",
+      "email": "admin@gmail.com",
+      "password": "admin123",
+      "id": 2
+    },
+    {
+      "username": "ironman",
+      "email": "ironman@gmail.com",
+      "password": "ironman",
+      "id": 3
+    }
+  ],
+  "blogs": [
+    {
+      "id": 1,
+      "title": "First Blog",
+      "description": "This is my first blog."
+    },
+    {
+      "id": 2,
+      "title": "Second Blog",
+      "description": "This is my second blog."
+    },
+    {
+      "title": "Third Blog",
+      "description": "This is third blog of mine",
+      "id": 3
+    },
+    {
+      "title": "Fourth Blog",
+      "description": "this is my fourth blog",
+      "id": 4
+    }
+  ]
+}
