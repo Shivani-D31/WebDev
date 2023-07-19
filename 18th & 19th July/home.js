@@ -32,6 +32,10 @@ createBlog.addEventListener('submit',(e)=>{
     })
     
 })
+function logout(){
+    localStorage.removeItem('token');
+    window.location.href='index.html';
+}
 
 
 
@@ -58,7 +62,62 @@ function displayData(data){
         body.textContent=`Description: ${item.description}`;
         edit.textContent="Edit Blog";
         del.textContent="Delete Blog";
+        edit.addEventListener('click',()=>{
+            handleEdit(item.id);
+        });
+        del.addEventListener('click',()=>{
+            handleDelete(item.id);
+        });
         blogs.append(title,body,edit,del);
     })
 }
+function handleEdit(id){
+    // const url=`http://localhost:3000/blogs/${id}`;
+    const newTitle=window.prompt("Enter the new title");
+    const newDes=window.prompt("Enter the new description");
+    const updatedData={
+        title:newTitle,
+        description:newDes
+    };
+
+    fetch(`http://localhost:3000/blogs/${id}`,{
+        method:'PUT',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body:JSON.stringify(updatedData)
+    })
+    .then(response=>{
+        if(response.ok){
+            alert(`Blog with Id ${id} updated:`);
+        }
+        else{
+            throw new Error('Error in updating the blog');
+        }
+    })
+    .catch(error=>{
+        console.log(error);
+    })
+}
+
+function handleDelete(id){
+    fetch(`http://localhost:3000/blogs/${id}`,{
+        method:'DELETE'
+    })
+    .then(response=>{
+        if(response.ok){
+            alert(`Blog with Id ${id} deleted:`);
+        }
+        else{
+            throw new Error('Error in deleting the blog');
+        }
+    })
+    .catch(error=>{
+        console.log(error);
+    })
+}
+   
+
+
+
 

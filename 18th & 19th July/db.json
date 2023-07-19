@@ -21,24 +21,14 @@
   ],
   "blogs": [
     {
-      "id": 1,
-      "title": "First Blog",
-      "description": "This is my first blog."
-    },
-    {
       "id": 2,
       "title": "Second Blog",
       "description": "This is my second blog."
     },
     {
-      "title": "Third Blog",
-      "description": "This is third blog of mine",
-      "id": 3
-    },
-    {
-      "title": "Fourth Blog",
-      "description": "this is my fourth blog",
-      "id": 4
+      "title": "Fifth Blog",
+      "description": "this is my fifth blog",
+      "id": 5
     }
   ]
 }
